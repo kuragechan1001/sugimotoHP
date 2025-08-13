@@ -1,0 +1,125 @@
+/* ヘッダー全体 */
+.header {
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 下に薄い影 */
+  z-index: 1000; /* メニューより前面に表示 */
+}
+
+body {
+  padding-top: 60px; /* ヘッダー分の余白を確保 */
+}
+
+/* ハンバーガー（三本線） */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* ← 右寄せ！ */
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  gap: 5px; /* ← 3本線の間隔を追加！ */
+  margin-right: 60px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%; /* ← 幅を指定しないと細くなることがある */
+  height: 3px;
+  background-color: #707070;
+  border-radius: 2px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* ハンバーガーとボタンの間隔 */
+}
+
+.contact-button {
+  padding: 8px 16px;
+  background-color:  #2C3E50;
+  color: #fff;
+  border: none;
+  border-radius: 9999px; /* 楕円形にする */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+/* マウスを置いたときに薄くする */
+.contact-button:hover {
+  opacity: 0.7; /* ← 半透明にする */
+  background-color: #3b4a5a; /* ← 少し明るくする（任意） */
+}
+
+
+
+
+/* メニュー（初期は非表示） */
+.nav-menu {
+  position: fixed;
+  top: 60px; /* ヘッダーの高さ分 */
+  right: 0;
+  width: 200px;
+  background-color: rgba(7, 31, 66, 0.8); /* 半透明にする */
+  z-index: 999; /* ヘッダーより下、画像より上 */
+  display: none;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* メニュー表示時 */
+.nav-menu.active {
+  display: block;
+}
+
+.image2-block {
+  display: inline-block;
+  width: 350px;
+  vertical-align: top;
+  transform: translateY(100px); /* ← 上にずらす */
+  margin-left: 100px; /* ← 画像1との間隔調整 */
+}
+
+.contact-button2 {
+  display: block; /* ← 横並び防止 */
+  margin-top: 20px;
+  padding: 25px 60px;
+  background-color: #2C3E50;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+/* マウスを置いたときに薄くする */
+.contact-button2:hover {
+  opacity: 0.7; /* ← 半透明にする */
+  background-color: #3b4a5a; /* ← 少し明るくする（任意） */
+}

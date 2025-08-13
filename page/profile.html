@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自己紹介画面</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<header class="header">
+  <div class="logo">logo</div> <!-- 左側 -->
+
+  <div class="header-right">
+    <a href="#contact" class="contact-button">お問い合わせはこちら</a>
+    <div class="hamburger" id="hamburger"> <!-- 右側 -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</header>
+
+<nav class="nav-menu" id="navMenu"> <!-- ヘッダーの外に出すと扱いやすい -->
+   <ul>
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="question.html">よくある質問</a></li>
+    <li><a href="terms.html">利用規約</a></li>
+    <li><a href="pravacy.html">プライバシーポリシー</a></li>
+  </ul>
+</nav>
+
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</header>
+
+<body>
+
+<h1>自己紹介</h1>
+  
+</body>
+</html>

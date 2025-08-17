@@ -42,14 +42,138 @@
 </header>
 
 <body>
-<div style="display: inline-block; width: 1000px;">
-  <img src="./image/image1.png" alt="サンプル画像" style="width: 100%;">
+  <div style="display: inline-block; width: 1000px;">
+    <img src="./image/image1.png" alt="サンプル画像" style="width: 100%;">
+  </div>
+
+  <div class="image2-block">
+    <img src="./image/image2.png" alt="サンプル画像" style="width: 100%;">
+    <a href="#contact" class="contact-button2">今すぐ登録はこちら</a>
+  </div>
+
+ <div class="intro">
+    <h1>杉本 大樹とは？</h1>
+    <p>
+    杉本 大樹は、理想通りの案件に繋がる出会いが見つかるフリーランス案件紹介営業です。<br>
+    <span>「早いレスポンス」</span>と<span>「計画性のあるヒアリング」</span>でエンジニア一人ひとりのキャリアプランを応援します。
+    </p>
+  </div>
+
+ <div class="image3-block">
+  <div class="card">
+    <img src="./image/image3.png" alt="サンプル画像">
+    <h1>将来を見据えたキャリアプランを考え<span>スキルを停滞させない！</span></h1> 
+    <p>本当に参画したいと思える案件に出会えます。</p>
+  </div>
+
+  <div class="card">
+    <img src="./image/image3.png" alt="サンプル画像">
+    <h1>今までご紹介したエンジニアの<span>案件参画満足度94％！</span></h1> 
+    <p>本当に参画したいと思える案件に出会えます。</p>
+  </div>
+
+  <div class="card">
+    <img src="./image/image3.png" alt="サンプル画像">
+    <h1>各分野で<span>No.1</span>の実績</h1> 
+    <p>顧客満足度No.1を獲得しています</p>
+  </div>
+
+  <div class="card">
+    <img src="./image/image3.png" alt="サンプル画像">
+    <h1><span>累計600件</span>マッチング！</h1> 
+    <p>エンジニア一人ひとりにぴったり合ったお案件を毎日4人ご紹介！</p>
+  </div>
 </div>
 
-<div class="image2-block">
-  <img src="./image/image2.png" alt="サンプル画像" style="width: 100%;">
-  <a href="#contact" class="contact-button2">今すぐ登録はこちら</a>
+<div class="intro">
+<div class="word"><span>＼杉本大樹オリジナル／</span></div>
+<h1><span>「計画性のある案件紹介」</span>は<br>
+スキルアップを見据えたあなたにおすすめ！</h1>
 </div>
-  
+
+<div class="feature-block">
+  <img src="./image/image4.png" alt="サンプル画像">
+  <div class="feature-text">
+    <h1>独自の質問を通して<br>出会う前から「価値観」がわかる</h1>
+    <h2>価値観がぴったり合った案件と<br>マッチングしやすくなります</h2>
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <img src="./image/image5.png" alt="サンプル画像" style="width: 60%;">
+</div>
+
+<img src="./image/image6.png" alt="サンプル画像" style="width: 100%; margin-top: 200px;">
+
+ <div class="intro">
+    <h1>実際に営業支援を受けたエンジニアのエピソードを<br>
+      ちょっと覗いて見ませんか？</h1>
+    <h2>杉本大樹では<span>64秒に1組のマッチングが成立</span>※8しています</h2>
+  </div>
+
+  <div class="carousel-container">
+  <button class="arrow left">＜</button>
+  <div class="carousel-track">
+    <img src="./image/image7.png" class="carousel-item" />
+    <img src="./image/image7.png" class="carousel-item" />
+    <img src="./image/image7.png" class="carousel-item" />
+    <!-- 追加可能 -->
+  </div>
+  <button class="arrow right">＞</button>
+</div>
+
+
+<script>
+const items = document.querySelectorAll(".carousel-item");
+const leftBtn = document.querySelector(".arrow.left");
+const rightBtn = document.querySelector(".arrow.right");
+const track = document.querySelector(".carousel-track");
+
+let currentIndex = Math.floor(items.length / 2); // 中央の画像からスタート
+
+function updateCarousel() {
+  // active クラスの更新
+  items.forEach((item, index) => {
+    item.classList.remove("active");
+  });
+  items[currentIndex].classList.add("active");
+
+  // スライド位置の調整
+  const itemWidth = items[0].offsetWidth + 20; // 画像幅＋マージン
+  const offset = itemWidth * currentIndex - (track.offsetWidth - itemWidth) / 2;
+  track.style.transform = `translateX(-${offset}px)`;
+
+  // 矢印の表示制御
+  leftBtn.style.display = currentIndex === 0 ? "none" : "block";
+  rightBtn.style.display = currentIndex === items.length - 1 ? "none" : "block";
+}
+
+// 左矢印クリック
+leftBtn.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+// 右矢印クリック
+rightBtn.addEventListener("click", () => {
+  if (currentIndex < items.length - 1) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+// 初期表示
+window.addEventListener("load", updateCarousel);
+</script>
+
+<div class="intro">
+<div class="word">24時間365日安心・安全にご利用いただくための</div>
+<h1>杉本大樹とのお約束</h1>
+<p>ネットを通した出会いが少し不安な方でも安心してフリーランスを進められるよう<br>
+杉本大樹ならではの安心・安全なサービスで在り続けます</p>
+</div>
+
 </body>
 </html>

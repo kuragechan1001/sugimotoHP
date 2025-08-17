@@ -120,7 +120,21 @@ body {
   opacity: 0.7; /* ← 半透明にする */
   background-color: #3b4a5a; /* ← 少し明るくする（任意） */
 }
+.feature-block {
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 20px; /* 画像とテキストの間隔 */
+  padding: 200px;
+}
 
+.feature-block img {
+  width: 600px; /* 画像サイズは調整してね */
+  height: auto;
+}
+
+.feature-text {
+  max-width: 600px;
+}
 
 .intro {
   text-align: center;

@@ -311,3 +311,48 @@ body {
   color: #2C3E50;
   font-weight: bold;
 }
+
+.blue-line1 {
+  height: 80px;
+  background-color: #094F94; /* 好きな青に変更OK */
+  display: flex;
+  align-items: center;
+  padding-left: 20px; /* 左に少し余白 */
+}
+
+.blue-line2 {
+  height: 40px;
+  background-color: #18407B; /* 好きな青に変更OK */
+  display: flex;
+  align-items: center;
+  padding-left: 20px; /* 左に少し余白 */
+}
+
+.blue-line2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.blue-line2 a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.category-bar {
+  width: 1200px;
+  height: 40px;
+  padding-left: 20px;
+  background-color: #E1C7AE;
+  color: #fff; 
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 40px; /* 高さと同じにして縦中央揃え */
+  margin: 20px auto; /* 中央配置 */
+  border-radius: 4px; /* 角を少し丸くして柔らかい印象に */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ほんのり影をつけて立体感 */
+}
